@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>使用命名空间：别名/导入</title>
+
+ </head>
+ <body><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="language.namespaces.nsconstants.html">namespace关键字和__NAMESPACE__常量</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="language.namespaces.global.html">全局空间</a></div>
+ <div class="up"><a href="language.namespaces.html">命名空间</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div><hr /><div id="language.namespaces.importing" class="sect1">
+  <h2 class="title">使用命名空间：别名/导入</h2>
+  <p class="verinfo">(PHP 5 &gt;= 5.3.0, PHP 7)</p>
+  <p class="para">
+   允许通过别名引用或导入外部的完全限定名称，是命名空间的一个重要特征。这有点类似于在类
+   unix 文件系统中可以创建对其它的文件或目录的符号连接。
+  </p>
+  <p class="para">
+   所有支持命名空间的PHP版本支持三种别名或导入方式：为类名称使用别名、为接口使用别名或为命名空间名称使用别名。PHP 5.6开始允许导入函数或常量或者为它们设置别名。
+  </p>
+  <p class="para">
+   在PHP中，别名是通过操作符 <em>use</em> 来实现的.  下面是一个使用所有可能的五种导入方式的例子：
+   <div class="example" id="example-256">
+    <p><strong>Example #1 使用use操作符导入/使用别名</strong></p>
+    <div class="example-contents">
+     <div class="phpcode"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">namespace&nbsp;</span><span style="color: #0000BB">foo</span><span style="color: #007700">;<br />use&nbsp;</span><span style="color: #0000BB">My</span><span style="color: #007700">\</span><span style="color: #0000BB">Full</span><span style="color: #007700">\</span><span style="color: #0000BB">Classname&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">Another</span><span style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;下面的例子与&nbsp;use&nbsp;My\Full\NSname&nbsp;as&nbsp;NSname&nbsp;相同<br /></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">My</span><span style="color: #007700">\</span><span style="color: #0000BB">Full</span><span style="color: #007700">\</span><span style="color: #0000BB">NSname</span><span style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;导入一个全局类<br /></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">ArrayObject</span><span style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;importing&nbsp;a&nbsp;function&nbsp;(PHP&nbsp;5.6+)<br /></span><span style="color: #007700">use&nbsp;function&nbsp;</span><span style="color: #0000BB">My</span><span style="color: #007700">\</span><span style="color: #0000BB">Full</span><span style="color: #007700">\</span><span style="color: #0000BB">functionName</span><span style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;aliasing&nbsp;a&nbsp;function&nbsp;(PHP&nbsp;5.6+)<br /></span><span style="color: #007700">use&nbsp;function&nbsp;</span><span style="color: #0000BB">My</span><span style="color: #007700">\</span><span style="color: #0000BB">Full</span><span style="color: #007700">\</span><span style="color: #0000BB">functionName&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">func</span><span style="color: #007700">;<br /><br /></span><span style="color: #FF8000">//&nbsp;importing&nbsp;a&nbsp;constant&nbsp;(PHP&nbsp;5.6+)<br /></span><span style="color: #007700">use&nbsp;const&nbsp;</span><span style="color: #0000BB">My</span><span style="color: #007700">\</span><span style="color: #0000BB">Full</span><span style="color: #007700">\</span><span style="color: #0000BB">CONSTANT</span><span style="color: #007700">;<br /><br /></span><span style="color: #0000BB">$obj&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;namespace\</span><span style="color: #0000BB">Another</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;实例化&nbsp;foo\Another&nbsp;对象<br /></span><span style="color: #0000BB">$obj&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Another</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;实例化&nbsp;My\Full\Classname　对象<br /></span><span style="color: #0000BB">NSname</span><span style="color: #007700">\</span><span style="color: #0000BB">subns</span><span style="color: #007700">\</span><span style="color: #0000BB">func</span><span style="color: #007700">();&nbsp;</span><span style="color: #FF8000">//&nbsp;调用函数&nbsp;My\Full\NSname\subns\func<br /></span><span style="color: #0000BB">$a&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">ArrayObject</span><span style="color: #007700">(array(</span><span style="color: #0000BB">1</span><span style="color: #007700">));&nbsp;</span><span style="color: #FF8000">//&nbsp;实例化&nbsp;ArrayObject&nbsp;对象<br />//&nbsp;如果不使用&nbsp;"use&nbsp;\ArrayObject"&nbsp;，则实例化一个&nbsp;foo\ArrayObject&nbsp;对象<br /></span><span style="color: #0000BB">func</span><span style="color: #007700">();&nbsp;</span><span style="color: #FF8000">//&nbsp;calls&nbsp;function&nbsp;My\Full\functionName<br /></span><span style="color: #007700">echo&nbsp;</span><span style="color: #0000BB">CONSTANT</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;echoes&nbsp;the&nbsp;value&nbsp;of&nbsp;My\Full\CONSTANT<br /></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+    </div>
+
+   </div>
+   注意对命名空间中的名称（包含命名空间分隔符的完全限定名称如 
+   <em>Foo\Bar</em>以及相对的不包含命名空间分隔符的全局名称如 
+   <em>FooBar</em>）来说，前导的反斜杠是不必要的也不推荐的，因为导入的名称必须是完全限定的，不会根据当前的命名空间作相对解析。
+  </p>
+  <p class="para">
+   为了简化操作，PHP还支持在一行中使用多个use语句
+   <div class="example" id="example-257">
+    <p><strong>Example #2 通过use操作符导入/使用别名，一行中包含多个use语句</strong></p>
+    <div class="example-contents">
+     <div class="phpcode"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">My</span><span style="color: #007700">\</span><span style="color: #0000BB">Full</span><span style="color: #007700">\</span><span style="color: #0000BB">Classname&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">Another</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">My</span><span style="color: #007700">\</span><span style="color: #0000BB">Full</span><span style="color: #007700">\</span><span style="color: #0000BB">NSname</span><span style="color: #007700">;<br /><br /></span><span style="color: #0000BB">$obj&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Another</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;实例化&nbsp;My\Full\Classname&nbsp;对象<br /></span><span style="color: #0000BB">NSname</span><span style="color: #007700">\</span><span style="color: #0000BB">subns</span><span style="color: #007700">\</span><span style="color: #0000BB">func</span><span style="color: #007700">();&nbsp;</span><span style="color: #FF8000">//&nbsp;调用函数&nbsp;My\Full\NSname\subns\func<br /></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+    </div>
+
+   </div>
+  </p>
+  <p class="para">
+   导入操作是在编译执行的，但动态的类名称、函数名称或常量名称则不是。
+   <div class="example" id="example-258">
+    <p><strong>Example #3 导入和动态名称</strong></p>
+    <div class="example-contents">
+     <div class="phpcode"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">My</span><span style="color: #007700">\</span><span style="color: #0000BB">Full</span><span style="color: #007700">\</span><span style="color: #0000BB">Classname&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">Another</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">My</span><span style="color: #007700">\</span><span style="color: #0000BB">Full</span><span style="color: #007700">\</span><span style="color: #0000BB">NSname</span><span style="color: #007700">;<br /><br /></span><span style="color: #0000BB">$obj&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Another</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;实例化一个&nbsp;My\Full\Classname&nbsp;对象<br /></span><span style="color: #0000BB">$a&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'Another'</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$obj&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">$a</span><span style="color: #007700">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;实际化一个&nbsp;Another&nbsp;对象<br /></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+    </div>
+
+   </div>
+  </p>
+  <p class="para">
+   另外，导入操作只影响非限定名称和限定名称。完全限定名称由于是确定的，故不受导入的影响。
+   <div class="example" id="example-259">
+    <p><strong>Example #4 导入和完全限定名称</strong></p>
+    <div class="example-contents">
+     <div class="phpcode"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">use&nbsp;</span><span style="color: #0000BB">My</span><span style="color: #007700">\</span><span style="color: #0000BB">Full</span><span style="color: #007700">\</span><span style="color: #0000BB">Classname&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">Another</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">My</span><span style="color: #007700">\</span><span style="color: #0000BB">Full</span><span style="color: #007700">\</span><span style="color: #0000BB">NSname</span><span style="color: #007700">;<br /><br /></span><span style="color: #0000BB">$obj&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Another</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;instantiates&nbsp;object&nbsp;of&nbsp;class&nbsp;My\Full\Classname<br /></span><span style="color: #0000BB">$obj&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;\</span><span style="color: #0000BB">Another</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;instantiates&nbsp;object&nbsp;of&nbsp;class&nbsp;Another<br /></span><span style="color: #0000BB">$obj&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">Another</span><span style="color: #007700">\</span><span style="color: #0000BB">thing</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;instantiates&nbsp;object&nbsp;of&nbsp;class&nbsp;My\Full\Classname\thing<br /></span><span style="color: #0000BB">$obj&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;\</span><span style="color: #0000BB">Another</span><span style="color: #007700">\</span><span style="color: #0000BB">thing</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;instantiates&nbsp;object&nbsp;of&nbsp;class&nbsp;Another\thing<br /></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+    </div>
+
+   </div>
+  </p>
+  <div class="sect2" id="language.namespaces.importing.scope">
+   <h3 class="title">Scoping rules for importing</h3>
+   <p class="para">
+    The <em>use</em> keyword must be declared in the 
+    outermost scope of a file (the global scope) or inside namespace 
+    declarations. This is because the importing is done at compile 
+    time and not runtime, so it cannot be block scoped. The following 
+    example will show an illegal use of the <em>use</em> 
+    keyword:
+   </p>
+   <p class="para">
+    <div class="example" id="example-260">
+     <p><strong>Example #5 Illegal importing rule</strong></p>
+     <div class="example-contents">
+<div class="phpcode"><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">namespace&nbsp;</span><span style="color: #0000BB">Languages</span><span style="color: #007700">;<br /><br />class&nbsp;</span><span style="color: #0000BB">Greenlandic<br /></span><span style="color: #007700">{<br />&nbsp;&nbsp;&nbsp;&nbsp;use&nbsp;</span><span style="color: #0000BB">Languages</span><span style="color: #007700">\</span><span style="color: #0000BB">Danish</span><span style="color: #007700">;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;...<br />}<br /></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+     </div>
+
+    </div>
+   </p>
+   <blockquote class="note"><p><strong class="note">Note</strong>: 
+    <p class="para">
+     Importing rules are per file basis, meaning included files will 
+     <em class="emphasis">NOT</em> inherit the parent file&#039;s importing rules.
+    </p>
+   </p></blockquote>
+  </div>
+ </div><hr /><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="language.namespaces.nsconstants.html">namespace关键字和__NAMESPACE__常量</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="language.namespaces.global.html">全局空间</a></div>
+ <div class="up"><a href="language.namespaces.html">命名空间</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div></body></html>

@@ -1,0 +1,8 @@
+#box{margin:0 auto; margin-bottom:50px;}
+#add-input{width:100%}
+#list{margin-top:20px}
+.list-group-item .check{display:block;top:12px;margin:0;padding:0;width:20px;height:20px;background:url('./check.png') no-repeat;border:none;cursor:pointer;position:absolute}
+.list-group-item .check.checked{background-position:-22px 0}
+.list-group-item .value{margin-left:30px;height:20px}
+.list-group-item .value.checked{text-decoration:line-through;color:#999999}
+.list-group-item .delete{float:right;cursor:pointer;top:7px}s

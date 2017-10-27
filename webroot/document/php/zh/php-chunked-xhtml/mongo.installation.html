@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>安装</title>
+
+ </head>
+ <body><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="mongo.requirements.html">需求</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="mongo.configuration.html">运行时配置</a></div>
+ <div class="up"><a href="mongo.setup.html">安装／配置</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div><hr /><div id="mongo.installation" class="section">
+ <h2 class="title">安装</h2>
+ 
+ <div class="warning"><strong class="warning">Warning</strong>
+  <p class="para">This extension is deprecated. Instead,
+the <a href="set.mongodb.html" class="link">MongoDB</a> extension should be
+used.</p>
+ </div>
+
+ <p class="para">
+  MongoDB 的 PHP 驱动程序可以工作在几乎任何系统上：Windows、Mac OS X、Unix 和 Linux；大端或小端字节序（little/big-endian）；32位和64位的机器；PHP 5.3-5.6(1.6之前的版本同时支持 PHP5.2)。
+ </p>
+ <p class="para">
+  此 <a href="http://pecl.php.net/" class="link external">&raquo;&nbsp;PECL</a> 扩展未与
+PHP 捆绑。 
+ </p>
+
+<ul class="simplelist">
+  <li class="member">
+   <a href="mongo.installation.html#mongo.installation.manual" class="xref">手动安装</a>
+  </li>
+  <li class="member">
+   <a href="mongo.installation.html#mongo.installation.nix" class="xref">在 *NIX 上安装</a>
+  </li>
+  <li class="member">
+   <a href="mongo.installation.html#mongo.installation.windows" class="xref">在 Windows 上安装</a>
+  </li>
+  <li class="member">
+   <a href="mongo.installation.html#mongo.installation.osx" class="xref">OS X</a>
+  </li>
+  <li class="member">
+   <a href="mongo.installation.html#mongo.installation.gentoo" class="xref">Gentoo</a>
+  </li>
+  <li class="member">
+   <a href="mongo.installation.html#mongo.installation.fedora" class="xref">Red Hat</a>
+  </li>
+  <li class="member">
+   <a href="mongo.installation.html#mongo.installation.thirdparty" class="xref">第三方安装说明</a>
+  </li>
+ </ul>
+ 
+ <div class="section" id="mongo.installation.manual">
+  <h2 class="title">手动安装</h2>
+
+  <p class="para">
+  驱动开发人员和对最新 bug 修复感兴趣的人，可以从 <a href="https://github.com/mongodb/mongo-php-driver-legacy" class="link external">&raquo;&nbsp;Github</a> 上获取最新源码来编译驱动。
+   前往 Github 并点击 &quot;download&quot; 按钮。然后运行：
+   <div class="example-contents">
+<div class="shellcode"><pre class="shellcode">$ tar zxvf mongodb-mongodb-php-driver-&lt;commit_id&gt;.tar.gz
+$ cd mongodb-mongodb-php-driver-&lt;commit_id&gt;
+$ phpize
+$ ./configure
+$ make all
+$ sudo make install</pre>
+</div>
+   </div>
+
+  </p>
+
+  <p class="para">
+   并按以下说明修改 php.ini：
+  </p>
+  <ul class="itemizedlist">
+   <li class="listitem">
+    <p class="para">
+    确保 <em class="emphasis">extension_dir</em> 变量指向了 <em class="emphasis">mongo.so</em> 的位置。
+     编译时会显示安装 PHP 驱动的位置，比如输出：
+     <div class="example-contents">
+<div class="txtcode"><pre class="txtcode">Installing &#039;/usr/lib/php/extensions/no-debug-non-zts-20060613/mongo.so&#039;</pre>
+</div>
+     </div>
+
+
+      确保和运行的 PHP 是同一个扩展目录：
+
+     <div class="example-contents">
+<div class="shellcode"><pre class="shellcode">$ php -i | grep extension_dir
+  extension_dir =&gt; /usr/lib/php/extensions/no-debug-non-zts-20060613 =&gt;
+                   /usr/lib/php/extensions/no-debug-non-zts-20060613</pre>
+</div>
+     </div>
+
+    如果不一致，则需要修改 php.ini 里的 <em class="emphasis">extension_dir</em>，或者把 <em class="emphasis">mongo.so</em> 移过去。
+    </p>
+   </li>
+   
+   
+   
+   <li class="listitem">
+    <p class="para">
+    要在 PHP 启动的时候加载这个扩展，添加一行：
+
+     <div class="example-contents">
+<div class="inicode"><pre class="inicode">extension=mongo.so</pre>
+</div>
+     </div>
+
+
+    </p>
+   </li>
+  </ul>
+
+ <div class="section" id="mongo.installation.nix">
+  <h2 class="title">在 *NIX 上安装</h2>
+
+  <p class="para">
+   执行:
+   <div class="example-contents">
+<div class="shellcode"><pre class="shellcode">$ sudo pecl install mongo</pre>
+</div>
+   </div>
+
+  </p>
+
+  <p class="para">
+   将以下内容添加到 php.ini 文件:
+   <div class="example-contents">
+<div class="inicode"><pre class="inicode">extension=mongo.so</pre>
+</div>
+   </div>
+
+  </p>
+
+  <p class="para">
+   如果 pecl 运行时超出了内存限制，请确认在 php.ini 中的 memory_limit 的设置至少有 128MB。
+  </p>
+ </div>
+
+ <div class="section" id="mongo.installation.windows">
+  <h2 class="title">在 Windows 上安装</h2>
+
+  <p class="para">
+   针对不同线程安全、VC版本的 PHP 发行版，可从 <a href="http://pecl.php.net/package/mongo" class="link external">&raquo;&nbsp;PECL</a> 获取到预编译的二进制文件。
+   解压，并把 php_mongo.dll 放到 PHP 扩展目录（默认是 “ext”）。
+  </p>
+
+  <p class="para">
+   将以下内容添加到 php.ini 文件:
+   <div class="example-contents">
+<div class="inicode"><pre class="inicode">extension=php_mongo.dll</pre>
+</div>
+   </div>
+
+  </p>
+
+  <blockquote class="note"><p><strong class="note">Note</strong>: 
+   <strong>为 Windows 用户添加额外的依赖 DLL</strong><br />
+   <p class="para">
+    为了使此扩展生效，
+<acronym title="Dynamic Link Library">DLL</acronym> 文件必须能在 Windows 系统的
+<em>PATH</em> 指示的路径下找到。如何操作的信息，请参见题为“<a href="faq.installation.html#faq.installation.addtopath" class="link">如何在 Windows 中将 PHP
+目录加到 PATH 中</a>”的<acronym title="Frequently Asked Questions">FAQ</acronym>。虽然将
+DLL 文件从 PHP 文件夹复制到 Windows 系统目录也行，但不建议这样做。
+<em class="emphasis">此扩展需要下列文件在 <em>PATH</em> 路径中：</em>
+    <var class="filename">libsasl.dll</var>
+   </p>
+  </p></blockquote>
+ </div>
+
+  <div class="section" id="mongo.installation.osx">
+   <h2 class="title">OS X</h2>
+   <p class="para">
+   大部分情况下，从 pecl 安装最简单：
+    <div class="example-contents">
+<div class="shellcode"><pre class="shellcode">$ sudo pecl install mongo</pre>
+</div>
+    </div>
+
+   </p>
+   <p class="para">
+   如果用的是 <a href="https://github.com/Homebrew/homebrew-php" class="link external">&raquo;&nbsp;Homebrew</a>，PHP 包含了驱动安装的方案。比如，安装 PHP 5.6 的驱动，可以使用以下命令：
+    <div class="example-contents">
+<div class="shellcode"><pre class="shellcode">$ brew install php56-mongo</pre>
+</div>
+    </div>
+
+   </p>
+   <p class="para">
+    如果使用的是 <a href="https://www.apachefriends.org/" class="link external">&raquo;&nbsp;XAMPP</a>，请注意它有自己的 pecl 二进制文件和 php.ini 配置。
+    你可以通过以下命令安装驱动：
+    <div class="example-contents">
+<div class="shellcode"><pre class="shellcode">$ sudo /Applications/XAMPP/xamppfiles/bin/pecl install mongo</pre>
+</div>
+    </div>
+
+   </p>
+   <blockquote class="note"><p><strong class="note">Note</strong>: 
+   <strong>在 OS X 上编译时的 Xcode 依赖</strong><br />
+   <p class="para">
+    在 OS X 上编译驱动需要 Xcode 开发工具，可以通过 <code class="code">xcode-select --install</code> 安装。
+    如果命令无效，也许应该先安装
+    <a href="https://developer.apple.com/downloads/index.action?name=Command%20Line%20Tools" class="link external">&raquo;&nbsp;Command Line Tools</a> 包。
+   </p>
+  </p></blockquote>
+  </div>
+
+  <div class="section" id="mongo.installation.gentoo">
+   <h2 class="title">Gentoo</h2>
+   <p class="para">
+    Gentoo 有一个 PHP 驱动的包，叫做 dev-php/pecl-mongo，可以通过以下命令安装：
+   </p>
+   <div class="example-contents">
+<div class="shellcode"><pre class="shellcode">$ sudo emerge -va dev-php5/mongo</pre>
+</div>
+   </div>
+
+
+   <p class="para">如果你使用了 PECL，你可能得到 libtool 版本不正确的错误。
+    从源码编译，你需要运行 aclocal 和 autoconf。
+   </p>
+   <div class="example-contents">
+<div class="shellcode"><pre class="shellcode">$ phpize &amp;&amp; aclocal &amp;&amp; autoconf &amp;&amp; ./configure &amp;&amp; make &amp;&amp; make install</pre>
+</div>
+   </div>
+
+  </div>
+  <div class="section" id="mongo.installation.fedora">
+   <h2 class="title">Red Hat</h2>
+   <p class="para">
+    同时包括 Fedora 和 CentOS。
+   </p>
+   <p class="para">
+    这些系统上默认的 Apache 设置禁止请求产生网络连接，意味着当连接到数据库，驱动会得到一个 &quot;Permission denied&quot;
+    错误。当遇到这个问题，可以试试运行：
+    <div class="example-contents">
+<div class="shellcode"><pre class="shellcode">$ /usr/sbin/setsebool -P httpd_can_network_connect 1</pre>
+</div>
+    </div>
+
+    然后重启 Apache。（在 SELinux 下也会产生这个问题。）
+   </p>
+  </div>
+ </div>
+
+ <div class="section" id="mongo.installation.thirdparty">
+  <h2 class="title">第三方安装说明</h2>
+  
+  <p class="para">
+   很多人撰写了安装 PHP 驱动的极好教程。
+  </p>
+
+  <ul class="itemizedlist">
+   <li class="listitem">
+    <p class="para">
+     <a href="http://justinhileman.info/article/reinstalling-php-on-mac-os-x/" class="link external">&raquo;&nbsp;
+      在 Mac OS X 上安装或重装 PHP 
+     </a>
+    </p>
+    <p class="para">
+     Justin Hileman 撰写的文章详细描述了在 OS X 上使用 Homebrew 安装 PHP 和额外的扩展（extension）。
+     此文补充了早些时候此页上用 Homebrew 安装驱动的说明。
+    </p>
+   </li>
+   <li class="listitem">
+    <p class="para">
+     <a href="https://www.vimeo.com/8005503" class="link external">&raquo;&nbsp;
+     
+       Ubuntu 9.10 / Apache 2.2 下，附带 Xdebug, MongoDB 和 Lithium 的 PHP 5.3.1。
+     </a>
+    </p>
+    <p class="para">
+    Jon Adams 的视频录像演示了如何在 Ubuntu 9.1 的 Apache 下快速设置运行 PHP 5.3.1，Xdebug 和 MongoDB。
+    </p>
+   </li>
+  </ul>
+ </div>
+
+</div><hr /><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="mongo.requirements.html">需求</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="mongo.configuration.html">运行时配置</a></div>
+ <div class="up"><a href="mongo.setup.html">安装／配置</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div></body></html>

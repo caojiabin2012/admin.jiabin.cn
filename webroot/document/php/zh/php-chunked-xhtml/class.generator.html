@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>生成器类</title>
+
+ </head>
+ <body><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="closure.bindto.html">Closure::bindTo</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="generator.current.html">Generator::current</a></div>
+ <div class="up"><a href="reserved.interfaces.html">预定义接口</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div><hr /><div id="class.generator" class="reference">
+ 
+ <h1 class="title">生成器类</h1>
+ 
+
+ <div class="partintro"><p class="verinfo">(No version information available, might only be in Git)</p>
+
+
+  <div class="section" id="generator.intro">
+   <h2 class="title">简介</h2>
+   <p class="para">
+    <strong class="classname">Generator</strong> 对象是从 <a href="language.generators.html" class="link">generators</a>返回的.
+   </p>
+   
+   <div class="caution"><strong class="caution">Caution</strong>
+    <p class="para">
+     <strong class="classname">Generator</strong> 对象不能通过
+     <a href="language.oop5.basic.html#language.oop5.basic.new" class="link">new</a> 实例化.
+    </p>
+   </div>
+
+  </div>
+
+
+  <div class="section" id="generator.synopsis">
+   <h2 class="title">类摘要</h2>
+
+
+   <div class="classsynopsis">
+    <div class="ooclass"></div>
+
+
+    <div class="classsynopsisinfo">
+     <span class="ooclass">
+      <strong class="classname">Generator</strong>
+     </span>
+     
+     <span class="oointerface">implements 
+      <span class="interfacename"><strong class="interfacename">Iterator</strong></span>
+     </span>
+     {</div>
+
+    
+    <div class="classsynopsisinfo classsynopsisinfo_comment">/* 方法 */</div>
+    <div class="methodsynopsis dc-description">
+   <span class="modifier">public</span> <span class="type">mixed</span> <span class="methodname"><a href="generator.current.html" class="methodname">current</a></span>
+    ( <span class="methodparam">void</span>
+   )</div>
+<div class="methodsynopsis dc-description">
+   <span class="modifier">public</span> <span class="type">mixed</span> <span class="methodname"><a href="generator.key.html" class="methodname">key</a></span>
+    ( <span class="methodparam">void</span>
+   )</div>
+<div class="methodsynopsis dc-description">
+   <span class="modifier">public</span> <span class="type">void</span> <span class="methodname"><a href="generator.next.html" class="methodname">next</a></span>
+    ( <span class="methodparam">void</span>
+   )</div>
+<div class="methodsynopsis dc-description">
+   <span class="modifier">public</span> <span class="type">void</span> <span class="methodname"><a href="generator.rewind.html" class="methodname">rewind</a></span>
+    ( <span class="methodparam">void</span>
+   )</div>
+<div class="methodsynopsis dc-description">
+   <span class="modifier">public</span> <span class="type">mixed</span> <span class="methodname"><a href="generator.send.html" class="methodname">send</a></span>
+    ( <span class="methodparam"><span class="type"><a href="language.pseudo-types.html#language.types.mixed" class="type mixed">mixed</a></span> <code class="parameter">$value</code></span>
+   )</div>
+<div class="methodsynopsis dc-description">
+   <span class="modifier">public</span> <span class="type">void</span> <span class="methodname"><a href="generator.throw.html" class="methodname">throw</a></span>
+    ( <span class="methodparam"><span class="type"><a href="class.exception.html" class="type Exception">Exception</a></span> <code class="parameter">$exception</code></span>
+   )</div>
+<div class="methodsynopsis dc-description">
+   <span class="modifier">public</span> <span class="type">bool</span> <span class="methodname"><a href="generator.valid.html" class="methodname">valid</a></span>
+    ( <span class="methodparam">void</span>
+   )</div>
+<div class="methodsynopsis dc-description">
+   <span class="modifier">public</span> <span class="type">void</span> <span class="methodname"><a href="generator.wakeup.html" class="methodname">__wakeup</a></span>
+    ( <span class="methodparam">void</span>
+   )</div>
+
+   }</div>
+
+
+  </div>
+
+ </div>
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+<h2>Table of Contents</h2><ul class="chunklist chunklist_reference"><li><a href="generator.current.html">Generator::current</a> — 返回当前产生的值</li><li><a href="generator.key.html">Generator::key</a> — 返回当前产生的键</li><li><a href="generator.next.html">Generator::next</a> — 生成器继续执行</li><li><a href="generator.rewind.html">Generator::rewind</a> — 重置迭代器</li><li><a href="generator.send.html">Generator::send</a> — 向生成器中传入一个值</li><li><a href="generator.throw.html">Generator::throw</a> — 向生成器中抛入一个异常</li><li><a href="generator.valid.html">Generator::valid</a> — 检查迭代器是否被关闭</li><li><a href="generator.wakeup.html">Generator::__wakeup</a> — 序列化回调</li></ul>
+</div>
+<hr /><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="closure.bindto.html">Closure::bindTo</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="generator.current.html">Generator::current</a></div>
+ <div class="up"><a href="reserved.interfaces.html">预定义接口</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div></body></html>
