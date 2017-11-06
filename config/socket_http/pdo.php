@@ -7,6 +7,7 @@
             'pass' => 'root',
             'dbname' => 'jiabin',
             'charset' => 'UTF8',
-            'pconnect'=>false,
+            'pconnect'=> true,
+            'ping'  => 1
         )
     );
