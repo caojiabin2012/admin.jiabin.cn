@@ -1,6 +1,5 @@
 <?php
 use Common\Utils ;
-var_dump($data);
 ?>
 <?php include(dirname(dirname(__DIR__)).'/header.php');?>
 <div class="container">
