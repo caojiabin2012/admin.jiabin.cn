@@ -61,10 +61,8 @@ class Document extends \Ctrl\Admin implements IController
 
     public function git()
     {
-        #$git = Common\LoadClass::getDao('Document\\Git');
-        #$data = $git->fetchAll();
-        $pinyin = new Pinyin();
-        $data = $pinyin->convert('带着希望去旅行，比到达终点更美好');
+        $git = Common\LoadClass::getDao('Document\\Git');
+        $data = $git->fetchAll();
         return ['data' => $data];
     }
 
