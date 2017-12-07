@@ -1,6 +1,6 @@
 ////////////////// Widget Directives ///////////////////
 
-var templates_dir = 'public/plug/LinuxDash/';
+var templates_dir = 'public/plug/linux-dash/';
 linuxDash.directive('diskSpace', ['server', function(server) {
     return {
         restrict: 'E',
