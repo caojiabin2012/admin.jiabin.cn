@@ -50,7 +50,7 @@ class Tools extends \Ctrl\Admin implements IController
        // header("Cache-Control: no-store, no-cache, must-revalidate");
         //header("Pragma: no-cache");
 
-        $modules_dir = \ZPHP\ZPHP::getRootPath().'/webroot/public/plug/linux-dash/app/shell_files/';
+        $modules_dir = \ZPHP\ZPHP::getRootPath().'/webroot/public/plug/linux-dash/server/shell_files/';
         $module = escapeshellcmd(Request::getParams()['module']);
         $data = shell_exec( $modules_dir . $module . '.sh' );
         return array_merge(json_decode($data, true), ['_view_mode' => 'Json']);
