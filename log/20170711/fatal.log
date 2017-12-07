@@ -1,4 +1,0 @@
-2017-07-11 21:16:17	main.main		1	"swoole_server::__construct(): listen server port failed."	"\/mnt\/hgfs\/htdocs\/www\/jiabin\/framework\/zphp\/ZPHP\/Socket\/Adapter\/Swoole.php"	41
-2017-07-11 21:47:30	Main\AccountInfo.ftp	dbb5d7d6b96dc975ceb554a264349ad17905806d	1	"Class 'Dao\\Accountinfo\\Base' not found"	"\/mnt\/hgfs\/htdocs\/www\/jiabin\/admin.jiabin.cn\/apps\/Dao\/Accountinfo\/FTP.php"	7
-2017-07-11 21:47:48	Main\AccountInfo.db	5a84fb2f734f6d71a4ab41dd0e36b53b54bf4df4	1	"Class 'Dao\\Accountinfo\\Base' not found"	"\/mnt\/hgfs\/htdocs\/www\/jiabin\/admin.jiabin.cn\/apps\/Dao\/Accountinfo\/DB.php"	7
-2017-07-11 21:49:03	Main\AccountInfo.db	28e5c9d2108232913eff0e59441f815173a36a24	1	"Class 'Dao\\Accountinfo\\Base' not found"	"\/mnt\/hgfs\/htdocs\/www\/jiabin\/admin.jiabin.cn\/apps\/Dao\/Accountinfo\/DB.php"	7
