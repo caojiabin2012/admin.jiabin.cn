@@ -1,10 +1,11 @@
 ////////////////// Widget Directives ///////////////////
 
+var templates_dir = 'public/plug/LinuxDash/';
 linuxDash.directive('diskSpace', ['server', function(server) {
     return {
         restrict: 'E',
         scope: {},
-        templateUrl: 'templates/modules/disk-space.html',
+        templateUrl: templates_dir+'templates/modules/disk-space.html',
         link: function (scope) {
 
             scope.heading =  "Disk Partitions";
@@ -42,7 +43,7 @@ linuxDash.directive('ramChart', ['server', function(server) {
     return {
         restrict: 'E',
         scope: {},
-        templateUrl: 'templates/modules/ram-chart.html',
+        templateUrl:  templates_dir+'templates/modules/ram-chart.html',
         link: function (scope) {
 
             // get max ram available on machine before we 
@@ -85,7 +86,7 @@ linuxDash.directive('cpuLoadChart', ['server', function(server) {
     return {
         restrict: 'E',
         scope: {},
-        templateUrl: 'templates/modules/cpu-load.html',
+        templateUrl:  templates_dir+'templates/modules/cpu-load.html',
         link: function (scope) {
             scope.units = '%';
         }
@@ -96,7 +97,7 @@ linuxDash.directive('uploadTransferRateChart', ['server', function(server) {
     return {
         restrict: 'E',
         scope: {},
-        templateUrl: 'templates/modules/upload-transfer-rate.html',
+        templateUrl:  templates_dir+'templates/modules/upload-transfer-rate.html',
         link: function (scope) {
             scope.delay = 2000;
             scope.units = 'KB/s';
@@ -108,7 +109,7 @@ linuxDash.directive('downloadTransferRateChart', ['server', function(server) {
     return {
         restrict: 'E',
         scope: {},
-        templateUrl: 'templates/modules/download-transfer-rate.html',
+        templateUrl:  templates_dir+'templates/modules/download-transfer-rate.html',
         link: function (scope) {
             scope.delay = 2000;
             scope.units = 'KB/s';
@@ -213,7 +214,7 @@ simpleTableModules.forEach(function (module, key) {
         };
         
         if (module.templateUrl) {
-            moduleDirective['templateUrl'] = 'templates/modules/' + module.templateUrl
+            moduleDirective['templateUrl'] =  templates_dir+'templates/modules/' + module.templateUrl
         }
 
         if (module.template) {
