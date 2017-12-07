@@ -8,13 +8,13 @@
         <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
         <link rel="icon" href="static/favicon.ico" type="image/x-icon">
         <link href='//fonts.googleapis.com/css?family=Merriweather:300italic,300|Open+Sans:400,600' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="/public/plug/linux-dash/css/main.css">
-        <link rel="stylesheet" type="text/css" href="/public/plug/linux-dash/css/themes.css">
-        <link rel="stylesheet" type="text/css" href="/public/plug/linux-dash/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="/public/plug/LinuxDash/static/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/public/plug/LinuxDash/static/css/themes.css">
+        <link rel="stylesheet" type="text/css" href="/public/plug/LinuxDash/static/css/animate.css">
 
         <!-- Angular Libs -->
-        <script src="/public/plug/linux-dash/js/angular.min.js" type="text/javascript"></script>
-        <script src="/public/plug/linux-dash/js/angular-route.js" type="text/javascript"></script>
+        <script src="/public/plug/LinuxDash/static/js/angular.min.js" type="text/javascript"></script>
+        <script src="/public/plug/LinuxDash/static/js/angular-route.js" type="text/javascript"></script>
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
           <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -39,8 +39,8 @@
 
         <!-- Javascript-->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="/public/plug/linux-dash/js/linuxDash.js" type="text/javascript"></script>
-        <script src="/public/plug/linux-dash/js/modules.js" type="text/javascript"></script>
-        <script src="/public/plug/linux-dash/js/smoothie.min.js" type="text/javascript"></script>
+        <script src="/public/plug/LinuxDash/static/js/linuxDash.js" type="text/javascript"></script>
+        <script src="/public/plug/LinuxDash/static/js/modules.js" type="text/javascript"></script>
+        <script src="/public/plug/LinuxDash/static/js/smoothie.min.js" type="text/javascript"></script>
     </body>
 </html>
