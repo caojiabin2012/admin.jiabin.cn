@@ -35,8 +35,8 @@ use Common\Utils;
 	<div class="panel panel-default">
 		<div class="panel-heading">文档参考</div>
 		<div class="panel-body">
-			<a href="/document/php/zh/php-chunked-xhtml/index.html" target="_blank">PHP</a>&nbsp;&nbsp;
-			<a href="/document/timecash/0315/start.html#g=1&p=更新记录" target="_blank">TimeCash</a>&nbsp;&nbsp;
+			<a href="/public//document/php/zh/php-chunked-xhtml/index.html" target="_blank">PHP</a>&nbsp;&nbsp;
+			<a href="/public//document/timecash/0315/start.html#g=1&p=更新记录" target="_blank">TimeCash</a>&nbsp;&nbsp;
 		</div>
 	</div>
 
