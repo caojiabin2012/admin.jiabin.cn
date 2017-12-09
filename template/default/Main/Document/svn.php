@@ -14,7 +14,7 @@ use Common\Utils ;
        <div class="panel panel-default">
             <div class="panel-heading">文档</div>
             <div class="panel-body">
-                <a href="/document/version control/svn/TortoiseSVN中文帮助手册.pdf" target="_blank">官方手册</a>&nbsp;&nbsp;
+                <a href="/public/document/version control/svn/TortoiseSVN中文帮助手册.pdf" target="_blank">官方手册</a>&nbsp;&nbsp;
             </div>
         </div>
 <?php include(dirname(dirname(__DIR__)).'/footer.php');?>

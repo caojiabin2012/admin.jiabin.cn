@@ -14,7 +14,7 @@ use Common\Utils ;
        <div class="panel panel-default">
             <div class="panel-heading">文档</div>
             <div class="panel-body">
-                <a href="/document/zikao/jienengjishu/1704讲义.pdf" target="_blank">1704讲义</a>&nbsp;&nbsp;
+                <a href="/public/document/zikao/jienengjishu/1704讲义.pdf" target="_blank">1704讲义</a>&nbsp;&nbsp;
             </div>
             <div class="panel-footer"></div>
 
@@ -23,7 +23,7 @@ use Common\Utils ;
         <div class="panel panel-default">
             <div class="panel-heading">英语</div>
             <div class="panel-body">
-                <a href="/document/zikao/english/1704自考英语二高频词汇（打印版）.pdf" target="_blank">1704高频词汇</a>&nbsp;&nbsp;
+                <a href="/public/document/zikao/english/1704自考英语二高频词汇（打印版）.pdf" target="_blank">1704高频词汇</a>&nbsp;&nbsp;
             </div>
             <div class="panel-footer"></div>
             

@@ -13,7 +13,7 @@ use Common\Utils ;
         </div>
        <div class="panel panel-default">
             <div class="panel-heading">官方手册</div>
-            <iframe src="/document/php/zh/php-chunked-xhtml/index.html" style="width: 1140px;height: 1000px;border: 0px solid #ddd;"></iframe>
+            <iframe src="/public/document/php/zh/php-chunked-xhtml/index.html" style="width: 1140px;height: 1000px;border: 0px solid #ddd;"></iframe>
             <div class="panel-footer"></div>
         </div>
 <?php include(dirname(dirname(__DIR__)).'/footer.php');?>

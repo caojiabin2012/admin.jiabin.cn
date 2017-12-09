@@ -22,11 +22,11 @@ use Common\Utils ;
     <div class="panel panel-default">
         <div class="panel-heading">流程</div>
         <div class="panel-body">
-            <a href="/document/timecash/流程/登录.pdf" target="_blank">登录</a>&nbsp;&nbsp;
-            <a href="/document/timecash/流程/注册授信.pdf" target="_blank">注册授信</a>&nbsp;&nbsp;
-            <a href="/document/timecash/流程/借款.pdf" target="_blank">借款</a>&nbsp;&nbsp;
-            <a href="/document/timecash/流程/到期扣款.pdf" target="_blank">到期扣款</a>&nbsp;&nbsp;
-            <a href="/document/timecash/流程/主动还款.pdf" target="_blank">主动还款</a>&nbsp;&nbsp;
+            <a href="/public/document/timecash/流程/登录.pdf" target="_blank">登录</a>&nbsp;&nbsp;
+            <a href="/public/document/timecash/流程/注册授信.pdf" target="_blank">注册授信</a>&nbsp;&nbsp;
+            <a href="/public/document/timecash/流程/借款.pdf" target="_blank">借款</a>&nbsp;&nbsp;
+            <a href="/public/document/timecash/流程/到期扣款.pdf" target="_blank">到期扣款</a>&nbsp;&nbsp;
+            <a href="/public/document/timecash/流程/主动还款.pdf" target="_blank">主动还款</a>&nbsp;&nbsp;
         </div>
     </div>
 <?php include(dirname(dirname(__DIR__)).'/footer.php');?>
