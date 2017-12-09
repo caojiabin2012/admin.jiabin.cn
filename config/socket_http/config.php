@@ -8,7 +8,7 @@ return array(
     'project' => [
         'app_host' => '192.168.1.163:8888',
         'default_ctrl_name' => 'Main\Main',
-        'name'=>'jiabin',
+        'tpl_path' => ZPHP\ZPHP::getRootPath() . DS . 'template' . DS . 'admin' . DS,
     ],
     'app_path' => 'apps',
     'ctrl_path' => 'Ctrl',
