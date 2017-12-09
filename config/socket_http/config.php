@@ -8,7 +8,7 @@ return array(
     'project' => [
         'app_host' => '192.168.1.163:8888',
         'default_ctrl_name' => 'Main\Main',
-        'pid_path' => __DIR__
+        'name'=>'jiabin',
     ],
     'app_path' => 'apps',
     'ctrl_path' => 'Ctrl',
