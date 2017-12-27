@@ -1,6 +1,12 @@
 <?php
 return array(
         'route'=>array(
+            'static' => array(                  //静态路由
+                '/Form/json' => array(
+                    'Main\\Form',               //ctrl类
+                    'json'                     //具体执行的方法
+                ),
+            ),
             'dynamic' => array(                     //动态路由
                 '/^\/(\d+)\/(.*?)$/iU' => array(    //匹配 http://host/uid/token
                     'main\\main',                   //ctrl类
