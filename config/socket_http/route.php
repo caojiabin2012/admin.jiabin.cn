@@ -102,6 +102,10 @@ return [
                     'Main\\Refre',
                     'androidmanifest'
                 ],
+                '/other/plan' => [
+                    'Main\\Other',
+                    'plan'
+                ],
             ],
             'dynamic' => [                     //动态路由
                 '/^\/(\d+]\/(.*?]$/iU' => [    //匹配 http://host/uid/token
