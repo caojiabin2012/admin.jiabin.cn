@@ -53,8 +53,8 @@ use Common\Utils;
 		<div class="panel-heading">网络工具</div>
 		<div class="panel-body">
 			<a href="https://github.com/caojiabin2012" target="_blank">github</a>&nbsp;&nbsp;
-			<a href="https://gitlab.com/caojiabin2012" target="_blank">gitlab</a>&nbsp;&nbsp;
-			<a href="http://jenkins.jucash.com.cn/" target="_blank">jenkins</a>&nbsp;&nbsp;
+			<a href="https://gitlab.com/caojiabin2012" target="_blank" style="color: #F34925">gitlab</a>&nbsp;&nbsp;
+			<a href="http://jenkins.jucash.com.cn/" target="_blank" style="color: #F34925">jenkins</a>&nbsp;&nbsp;
 			<a href="<?=Utils::makeUrl('Main/Net', 'reurl')?>">定时刷新网址</a>&nbsp;&nbsp;
 			<a href="<?=Utils::makeUrl('Main/Net', 'client')?>">获取浏览器信息</a>&nbsp;&nbsp;
 		</div>
