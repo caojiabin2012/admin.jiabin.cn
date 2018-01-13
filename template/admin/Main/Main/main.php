@@ -45,7 +45,7 @@ use Common\Utils;
 		<div class="panel-heading">代码处理</div>
 		<div class="panel-body">
 			<a href="<?=Utils::makeUrl('Main/Code', 'diff')?>">文本/代码对比工具</a>&nbsp;&nbsp;
-			<a href="<?=Utils::makeUrl('Main/Code', 'translate')?>">在线文本转换拼音工具>&nbsp;&nbsp;
+			<a href="<?=Utils::makeUrl('Main/Code', 'translate')?>">在线文本转换拼音工具&nbsp;&nbsp;
 		</div>
 	</div>
 
