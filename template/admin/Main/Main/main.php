@@ -35,18 +35,9 @@ use Common\Utils;
 	<div class="panel panel-default">
 		<div class="panel-heading">文档参考</div>
 		<div class="panel-body">
-			<a href="/public//document/php/zh/php-chunked-xhtml/index.html" target="_blank">PHP</a>&nbsp;&nbsp;
-			<a href="/public//document/timecash/0315/start.html#g=1&p=更新记录" target="_blank">TimeCash</a>&nbsp;&nbsp;
-		</div>
-	</div>
-
-	<div class="panel panel-default">
-		<div class="panel-heading">网址处理</div>
-		<div class="panel-body">
-			<a href="<?=Utils::makeUrl('Main/Url', 'index')?>" style="color: #F34925">网址批量打开工具</a>&nbsp;&nbsp;
-			<a href="<?=Utils::makeUrl('Main/Code', '')?>/url/parse.html">在线URL参数解析</a>&nbsp;&nbsp;
-			<a href="<?=Utils::makeUrl('Main/Code', '')?>/url/urlencode.html">在线URL编码器</a>&nbsp;&nbsp;
-			<a href="<?=Utils::makeUrl('Main/Code', '')?>/url/urldecode.html">在线URL解码器</a>&nbsp;&nbsp;
+			<a href="http://php.net/manual/zh/" target="_blank">PHP</a>&nbsp;&nbsp;
+			<a href="https://github.com/geeeeeeeeek/git-recipes/wiki" target="_blank">GIT</a>&nbsp;&nbsp;
+			<a href="http://www.runoob.com/regexp/regexp-tutorial.html" target="_blank">Regular</a>&nbsp;&nbsp;
 		</div>
 	</div>
 
@@ -54,6 +45,7 @@ use Common\Utils;
 		<div class="panel-heading">代码处理</div>
 		<div class="panel-body">
 			<a href="<?=Utils::makeUrl('Main/Code', 'diff')?>">文本/代码对比工具</a>&nbsp;&nbsp;
+			<a href="<?=Utils::makeUrl('Main/Code', 'translate')?>">在线文本转换拼音工具>&nbsp;&nbsp;
 		</div>
 	</div>
 

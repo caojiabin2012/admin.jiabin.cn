@@ -34,15 +34,6 @@ use Common\Utils;
                     </ul>
                 </li>
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">文档参考<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="http://php.net/manual/zh/" target="_blank">php</a></li>
-                        <li><a href="https://github.com/torvalds/linux/tree/master/Documentation" target="_blank">linux</a></li>
-                        <li><a href="http://www.runoob.com/regexp/regexp-tutorial.html" target="_blank">regular</a></li>
-                        <li><a href="https://github.com/geeeeeeeeek/git-recipes/wiki" target="_blank">git</a></li>
-                    </ul>
-                </li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">代码处理  <span class="caret"></span></a>
