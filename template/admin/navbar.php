@@ -37,24 +37,12 @@ use Common\Utils;
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">文档参考<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?=Utils::makeUrl('Main/Document', 'php')?>">PHP</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/Document', 'linux')?>" >LINUX</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/Document', 'timecash')?>">TimeCash</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/Document', 'regular')?>">Regular</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/Document', 'git')?>">GIT</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/Document', 'svn')?>">SVN</a></li>
+                        <li><a href="http://php.net/manual/zh/" target="_blank">php</a></li>
+                        <li><a href="https://github.com/torvalds/linux/tree/master/Documentation" target="_blank">linux</a></li>
+                        <li><a href="http://www.runoob.com/regexp/regexp-tutorial.html" target="_blank">regular</a></li>
+                        <li><a href="https://github.com/geeeeeeeeek/git-recipes/wiki" target="_blank">git</a></li>
                     </ul>
                 </li>
-
-                <!-- <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">网址处理<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?=Utils::makeUrl('Main/Json', 'index')?>/url.html">网址批量打开工具</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/Json', 'index')?>/url/parse.html">在线URL参数解析</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/Json', 'index')?>/url/urlencode.html">在线URL编码器</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/Json', 'index')?>/url/urldecode.html">在线URL解码器</a></li>
-                    </ul>
-                </li> -->
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">代码处理  <span class="caret"></span></a>
@@ -68,12 +56,9 @@ use Common\Utils;
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">网络工具<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="http://redis.jiabin.cn" target="_blank">Redis客户端</a></li>
-                        <li><a href="http://mongo.jiabin.cn" target="_blank">Mongo客户端</a></li>
                         <li><a href="<?=Utils::makeUrl('Main/Net', 'httpRequest')?>">Http请求</a></li>
                         <li><a href="<?=Utils::makeUrl('Main/Net', 'reurl')?>">定时刷新网址</a></li>
                         <li><a href="<?=Utils::makeUrl('Main/Net', 'client')?>">获取浏览器信息</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/Tools', 'linuxDash')?>">系统监控</a></li>
                     </ul>
                 </li>
 
@@ -93,21 +78,6 @@ use Common\Utils;
                     </ul>
                 </li>
 
-                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">账号管理<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="<?=Utils::makeUrl('Main/AccountInfo', 'ftp')?>">FTP</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/AccountInfo', 'db')?>">DB</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/AccountInfo', 'svn')?>" style="color: #F34925">SVN</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/AccountInfo', 'git')?>">GIT</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="<?=Utils::makeUrl('Main/Refre', 'asciilist')?>">待扩展一</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/Refre', 'websafecolors')?>">待扩展二</a></li>
-                        <li><a href="<?=Utils::makeUrl('Main/Refre', 'androidmanifest')?>">待扩展三</a></li>
-                    </ul>
-                </li>
-
-
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他工具<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -119,20 +89,6 @@ use Common\Utils;
                         <li><a href="http://fm.xinli001.com/" target="_blank">心灵氧吧</a></li></li>
                     </ul>
                 </li>
-
-                <!--
-            <ul class="nav navbar-nsav navbar-right">
-                <li class="active">
-                    <a href="./">Default</a>
-                </li>
-                <li>
-                    <a href="../navbar-static-top/">Static top</a>
-                </li>
-                <li>
-                    <a href="../navbar-fixed-top/">Fixed top</a>
-                </li>
-            </ul>
-            -->
         </div>
         <!--/.nav-collapse -->
     </div>

@@ -60,10 +60,9 @@ use Common\Utils;
 	<div class="panel panel-default">
 		<div class="panel-heading">网络工具</div>
 		<div class="panel-body">
-			<a href="redis.jiabin.cn" target="_blank">Redis</a>&nbsp;&nbsp;
-			<a href="mongo.jiabin.cn" target="_blank">Mongo</a>&nbsp;&nbsp;
-			<a href="127.0.0.1:10080" target="_blank">GitLab</a>&nbsp;&nbsp;
-			<a href="http://jenkins.timecash.cn/" target="_blank">Jenkins</a>&nbsp;&nbsp;
+			<a href="https://github.com/caojiabin2012" target="_blank">github</a>&nbsp;&nbsp;
+			<a href="https://gitlab.com/caojiabin2012" target="_blank">gitlab</a>&nbsp;&nbsp;
+			<a href="http://jenkins.jucash.com.cn/" target="_blank">jenkins</a>&nbsp;&nbsp;
 			<a href="<?=Utils::makeUrl('Main/Net', 'reurl')?>">定时刷新网址</a>&nbsp;&nbsp;
 			<a href="<?=Utils::makeUrl('Main/Net', 'client')?>">获取浏览器信息</a>&nbsp;&nbsp;
 		</div>
@@ -81,16 +80,6 @@ use Common\Utils;
 			<a href="<?=Utils::makeUrl('Main/Refre', 'asciilist')?>">Ascii码对照表</a>&nbsp;&nbsp;
 			<a href="<?=Utils::makeUrl('Main/Refre', 'websafecolors')?>">WEB安全色对照表</a>&nbsp;&nbsp;
 			<a href="<?=Utils::makeUrl('Main/Refre', 'androidmanifest')?>">Android Manifest 权限描述</a>&nbsp;&nbsp;
-		</div>
-	</div>
-
-	<div class="panel panel-default">
-		<div class="panel-heading">账号管理</div>
-		<div class="panel-body">
-			<a href="<?=Utils::makeUrl('Main/AccountInfo', 'ftp')?>">FTP</a>&nbsp;&nbsp;
-			<a href="<?=Utils::makeUrl('Main/AccountInfo', 'db')?>">DB</a>&nbsp;&nbsp;
-			<a href="<?=Utils::makeUrl('Main/AccountInfo', 'svn')?>">SVN</a>&nbsp;&nbsp;
-			<a href="<?=Utils::makeUrl('Main/AccountInfo', 'git')?>">GIT</a>&nbsp;&nbsp;
 		</div>
 	</div>
 
