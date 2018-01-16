@@ -1,7 +1,5 @@
 <?php
-
 namespace common;
-
 
 class ERROR
 {

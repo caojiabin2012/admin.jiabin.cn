@@ -2,15 +2,10 @@
 namespace Ctrl\Main;
 
 use ZPHP\Controller\IController;
-
 use ZPHP\Core\Config;
-
 use ZPHP\Protocol\Request;
-
 use Common\Utils;
-
 use ZPHP\View;
-
 use ZPHP\Client\Sync\Http as HttpClient;
 
 class Net extends \Ctrl\Admin implements IController

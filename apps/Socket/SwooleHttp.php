@@ -1,5 +1,4 @@
 <?php
-
 namespace Socket;
 
 use ZPHP\Common\Formater;

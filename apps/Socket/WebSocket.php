@@ -1,5 +1,4 @@
 <?php
-
 namespace socket;
 
 use ZPHP\Socket\Callback\WSServer;

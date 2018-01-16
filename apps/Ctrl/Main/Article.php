@@ -2,13 +2,9 @@
 namespace Ctrl\Main;
 
 use ZPHP\Controller\IController;
-
 use ZPHP\Core\Config;
-
 use ZPHP\Protocol\Request;
-
 use ZPHP\View;
-
 use Common;
 
 class Article implements IController

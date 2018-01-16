@@ -1,5 +1,6 @@
 <?php
 use ZPHP\ZPHP;
+
 $config =  array(
     'server_mode' => 'Server\WebSocket',
     'project_name' => 'zwebsocket',

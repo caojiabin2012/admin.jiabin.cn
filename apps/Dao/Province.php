@@ -1,7 +1,5 @@
 <?php
-
 namespace Dao;
-
 
 class Province extends Base 
 {

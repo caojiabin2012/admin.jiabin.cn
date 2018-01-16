@@ -1,5 +1,6 @@
 <?php
 namespace Ctrl;
+
 use ZPHP\Controller\IController;
 use ZPHP\Core\Config;
 use ZPHP\Protocol\Request;

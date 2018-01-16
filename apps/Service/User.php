@@ -1,8 +1,8 @@
 <?php
 namespace service;
 
-use common,
-    entity;
+use common;
+use entity;
 
 class User extends Base
 {

@@ -2,15 +2,10 @@
 namespace Ctrl\Main;
 
 use ZPHP\Controller\IController;
-
 use ZPHP\Core\Config;
-
 use ZPHP\Protocol\Request;
-
 use ZPHP\View;
-
 use Common;
-
 use Overtrue\Pinyin\Pinyin;
 
 class Document extends \Ctrl\Admin implements IController

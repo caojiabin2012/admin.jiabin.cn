@@ -2,7 +2,6 @@
 namespace Dao;
 
 use ZPHP\Core\Config as ZConfig;
-    
 use ZPHP\Db\Pdo as ZPdo;
 
 abstract class Base

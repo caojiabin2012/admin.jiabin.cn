@@ -1,6 +1,6 @@
 <?php
-
 use \ZPHP\Socket\Adapter\Swoole;
+
 return array(
     'server_mode' => 'Socket',
     'project_name' => 'jiabinTcp',

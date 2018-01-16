@@ -1,9 +1,7 @@
 <?php
-
 namespace Dao\Document;
 
 use Dao\Base;
-
 
 class Regular extends Base 
 {

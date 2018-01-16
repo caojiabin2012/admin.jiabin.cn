@@ -1,9 +1,7 @@
 <?php
-
 namespace Dao\Document;
 
 use Dao\Base;
-
 
 class Git extends Base 
 {

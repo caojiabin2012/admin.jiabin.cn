@@ -1,7 +1,6 @@
 <?php
 namespace service;
 
-
 class Base {
 
     protected $dao;

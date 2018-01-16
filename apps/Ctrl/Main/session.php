@@ -1,8 +1,9 @@
 <?php
 namespace Ctrl\Main;
-use ZPHP\Controller\IController,
-    ZPHP\Core\Config,
-    ZPHP\View;
+
+use ZPHP\Controller\IController;
+use ZPHP\Core\Config;
+use ZPHP\View;
 use ZPHP\Session\Factory as ZSession;
 use ZPHP\Protocol\Request;
 

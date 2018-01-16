@@ -1,7 +1,5 @@
 <?php
-
 namespace Dao;
-
 
 class City extends Base 
 {
